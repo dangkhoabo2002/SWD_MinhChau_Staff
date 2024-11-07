@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete - KoiFish</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar,
+      .footer {
+        background-color: #ff6347; /* Orange-red color suitable for KOI fish theme */
+      }
+      .navbar-brand {
+        color: #fff !important;
+      }
+      .row {
+        width: 500px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      .detailData {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 28px 44px;
+        border-radius: 3%;
+      }
+      .form-label {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-3">Delete</h1>
+      <h4 class="text-center mb-4">KoiFish</h4>
+      <div class="d-flex mx-100 justify-content-center pb-5">
+        <div
+          class="d-flex flex-column justify-content-center mw-100 align-self-center detailData"
+        >
+          <div class="alert alert-warning text-center" role="alert">
+            Are you sure you want to delete this KoiFish?
+          </div>
+
+          <div class="row">
+            <div class="col-6 title">Name</div>
+            <div class="col-6 value">Blaze</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Description</div>
+            <div class="col-6 value">Orange with black spots</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Dob</div>
+            <div class="col-6 value">6/20/2021 12:00:00 AM</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Price</div>
+            <div class="col-6 value">200</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Origin</div>
+            <div class="col-6 value">Japan</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Gender</div>
+            <div class="col-6 value">Male</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">CreatedBy</div>
+            <div class="col-6 value">Staff</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">CreateDate</div>
+            <div class="col-6 value">11/6/2024 9:25:00 AM</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">UpdateDate</div>
+            <div class="col-6 value">N/A</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">IsDeleted</div>
+            <div class="col-6">
+              <select class="form-select form-select-sm" disabled>
+                <option>False</option>
+                <option>True</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Category</div>
+            <div class="col-6 value">N/A</div>
+          </div>
+          <div class="row">
+            <div class="col-6 title">Size</div>
+            <div class="col-6 value">N/A</div>
+          </div>
+          <div class="footer-links d-flex justify-content-between pt-5">
+            <a
+              href="index.html"
+              class="text-decoration-none btn btn-success px-4"
+              >Cancel</a
+            >
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPORT NAVBAR -->
+    <script>
+      fetch("../navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading navbar:", error));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
